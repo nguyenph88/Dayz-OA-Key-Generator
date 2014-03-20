@@ -24,7 +24,8 @@ def create_file(files, combinations):
     for i in range(int(files)):
         fileName = "file" + str(i) + ".txt"
         fo = open(fileName, "wb")
-        fo.write( "Python is a great language.\nYeah its great!!\n");
+        for j in range(int(combinations)):
+          fo.write(generate_hex() + '\n');
         fo.close()
 
 '''
@@ -48,8 +49,7 @@ def main(argv):
 
     # Create files
     create_file(fileTotal, combTotal)     
-    print fileTotal
-    print combTotal
+    
 
 if __name__ == "__main__":
    main(sys.argv[1:])
